@@ -1,0 +1,48 @@
+<% layout('layouts/boilerplate') %>
+    <div class="row">
+        <h1 class="text-center">Book Campground</h1>
+        <div class="col-md-6 offset-md-3">
+            <form action="/campgrounds/<%= currentUser._id %>/bookings" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label" for="from">From</label>
+                    <input class="form-control" type="date" id="from" name="from" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="to">To</label>
+                    <input class="form-control" type="date" id="to" name="to" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+
+             
+
+                <div class="mb-3">
+                    <label class="form-label" for="capacity">No of rooms</label>
+                    <div class="input-group">
+
+                        
+                        <input type="text" class="form-control" id="capacity" placeholder="0.00" aria-label="capacity"
+                            aria-describedby="capacity-label" name="capacity" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                </div>
+
+                
+                <div class="mb-3">
+                    <button class="btn btn-success">Book Campground</button>
+                </div>
+
+            </form>
+
+            
+        </div>
+    </div>
